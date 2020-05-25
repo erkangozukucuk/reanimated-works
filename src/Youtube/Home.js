@@ -38,7 +38,9 @@ const Home = () => {
           );
         })}
       </ScrollView>
-      {video && <VideoModal {...{video}}></VideoModal>}
+      {video && (
+        <VideoModal {...{video, onClose: () => setVideo(null)}}></VideoModal>
+      )}
     </View>
   );
 };

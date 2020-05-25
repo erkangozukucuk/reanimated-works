@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Metrics from '../Metrics';
 const AvatarSize = 50;
 
-const VideoModal = ({video}) => {
+const VideoModal = ({video, onClose}) => {
   return (
-    <View>
+    <View style={[StyleSheet.absoluteFill, {backgroundColor: 'white'}]}>
       <Image source={video?.thumbnail} style={styles.thumbnail}></Image>
       <View style={styles.detailContainer}>
         <Text style={styles.name}>{video?.name}</Text>
@@ -27,10 +27,11 @@ const VideoModal = ({video}) => {
             <Text>Download</Text>
           </View>
           <View style={styles.actionColumn}>
-            <Text>Save</Text>
+            <TouchableOpacity onPress={onClose}>
+              <Text>Save</Text>
+            </TouchableOpacity>
           </View>
         </View>
-        <View style={{flex: 1, backgroundColor: 'pink'}}></View>
       </View>
     </View>
   );
@@ -50,7 +51,11 @@ const styles = StyleSheet.create({
     height: (Metrics.Width * 720) / 1280,
     resizeMode: 'contain',
   },
-  detailContainer: {padding: 10},
+  detailContainer: {
+    padding: 10,
+
+    // backgroundColor: 'red',
+  },
   avatar: {
     width: AvatarSize,
     aspectRatio: 1,
