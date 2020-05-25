@@ -1,11 +1,44 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Metrics from '../Metrics';
+import Animated, {Clock, Easing, Value} from 'react-native-reanimated';
+
 const AvatarSize = 50;
 
 const VideoModal = ({video, onClose}) => {
+  const [animationValue, setAnimationValue] = useState(new Value(0));
+  useEffect(() => {
+    if (video) {
+      startAnimation(true);
+    }
+  }, [video]);
+
+  const startAnimation = (isOpen, callBack) => {
+    Animated.timing(animationValue, {
+      duration: 500,
+      toValue: isOpen ? 1 : 0,
+      easing: Easing.inOut(Easing.ease),
+    }).start(() => {});
+  };
+
+  const translateY = animationValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: [Metrics.Height, 0],
+  });
+
   return (
-    <View style={[StyleSheet.absoluteFill, {backgroundColor: 'white'}]}>
+    <Animated.View
+      style={[
+        StyleSheet.absoluteFill,
+        {
+          backgroundColor: 'white',
+          transform: [
+            {
+              translateY,
+            },
+          ],
+        },
+      ]}>
       <Image source={video?.thumbnail} style={styles.thumbnail}></Image>
       <View style={styles.detailContainer}>
         <Text style={styles.name}>{video?.name}</Text>
@@ -27,13 +60,16 @@ const VideoModal = ({video, onClose}) => {
             <Text>Download</Text>
           </View>
           <View style={styles.actionColumn}>
-            <TouchableOpacity onPress={onClose}>
+            <TouchableOpacity
+              onPress={() => {
+                startAnimation(false, onClose);
+              }}>
               <Text>Save</Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
-    </View>
+    </Animated.View>
   );
 };
 
