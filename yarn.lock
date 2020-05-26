@@ -1551,7 +1551,7 @@ array-filter@~0.0.0:
   resolved "https://registry.yarnpkg.com/array-filter/-/array-filter-0.0.1.tgz#7da8cf2e26628ed732803581fd21f67cacd2eeec"
   integrity sha1-fajPLiZijtcygDWB/SH2fKzS7uw=
 
-array-includes@^3.0.3, array-includes@^3.1.1:
+array-includes@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/array-includes/-/array-includes-3.1.1.tgz#cdd67e6852bdf9c1215460786732255ed2459348"
   integrity sha512-c2VXaCHl7zPsvpkFsw4nxvFie4fh1ur9bpcgsVkIjqn0H/Xwdg+7fv3n2r/isyS8EBj5b06M9kHyZuIr4El6WQ==
@@ -2257,9 +2257,9 @@ cross-spawn@^6.0.0:
     which "^1.2.9"
 
 cross-spawn@^7.0.0, cross-spawn@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.2.tgz#d0d7dcfa74e89115c7619f4f721a94e1fdb716d6"
-  integrity sha512-PD6G8QG3S4FK/XCGFbEQrDqO2AnMMsy0meR7lerlIOHAAbkuavGU/pOqprrlvfTNjvowivTeBsjebAL0NSoMxw==
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
+  integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
   dependencies:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
@@ -2562,9 +2562,9 @@ eslint-config-prettier@^6.10.1:
     get-stdin "^6.0.0"
 
 eslint-plugin-eslint-comments@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-3.1.2.tgz#4ef6c488dbe06aa1627fea107b3e5d059fc8a395"
-  integrity sha512-QexaqrNeteFfRTad96W+Vi4Zj1KFbkHHNMMaHZEYcovKav6gdomyGzaxSDSL3GoIyUOo078wRAdYlu1caiauIQ==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-3.2.0.tgz#9e1cd7b4413526abb313933071d7aba05ca12ffa"
+  integrity sha512-0jkOl0hfojIHHmEHgmNdqv4fmh7300NdpA9FFpF7zaoLvB/QeXOGNLIo86oAveJFrfB1p05kC8hpEMHM8DwWVQ==
   dependencies:
     escape-string-regexp "^1.0.5"
     ignore "^5.0.5"
@@ -2651,9 +2651,9 @@ eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
 
 eslint@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.0.0.tgz#c35dfd04a4372110bd78c69a8d79864273919a08"
-  integrity sha512-qY1cwdOxMONHJfGqw52UOpZDeqXy8xmD0u8CT6jIstil72jkhURC704W8CFyTPDPllz4z4lu0Ql1+07PG/XdIg==
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.1.0.tgz#d9a1df25e5b7859b0a3d86bb05f0940ab676a851"
+  integrity sha512-DfS3b8iHMK5z/YLSme8K5cge168I8j8o1uiVmFCgnnjxZQbCGyraF8bMl7Ju4yfBmCuxD7shOF7eqGkcuIHfsA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -4361,11 +4361,11 @@ jsprim@^1.2.2:
     verror "1.10.0"
 
 jsx-ast-utils@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.2.3.tgz#8a9364e402448a3ce7f14d357738310d9248054f"
-  integrity sha512-EdIHFMm+1BPynpKOpdPqiOsvnIrInRGJD7bzPZdPkjitQEqpdpUuFpq4T0npZFKTiB3RhWFdGN+oqOJIdhDhQA==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.3.0.tgz#edd727794ea284d7fda575015ed1b0cde0289ab6"
+  integrity sha512-3HNoc7nZ1hpZIKB3hJ7BlFRkzCx2BynRtfSwbkqZdpRdvAPsGMnzclPwrvDBS7/lalHTj21NwIeaEpysHBOudg==
   dependencies:
-    array-includes "^3.0.3"
+    array-includes "^3.1.1"
     object.assign "^4.1.0"
 
 kind-of@^1.1.0:
@@ -5611,10 +5611,10 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
-react-native-reanimated@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.9.0.tgz#38676c99dd585504fdc7331efb45e5f48ec7339a"
-  integrity sha512-Aj+spgIHRiVv7ezGADxnSH1EoKrQRD2+XaSiGY0MiB/pvRNNrZPSJ+3NVpvLwWf9lZMOP7dwqqyJIzoZgBDt8w==
+react-native-reanimated@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.8.0.tgz#0b5719b20c1fed9aaf8afd9a12e21c9bd46ee428"
+  integrity sha512-vGTt94lE5fsZmfMwERWFIsCr5LHsyllOESeNvlKryLgAg7h4cnJ5XSmVSy4L3qogdgFYCL6HEgY+s7tQmKXiiQ==
   dependencies:
     fbjs "^1.0.0"
 
@@ -5780,9 +5780,9 @@ regexpu-core@^4.7.0:
     unicode-match-property-value-ecmascript "^1.2.0"
 
 regjsgen@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/regjsgen/-/regjsgen-0.5.1.tgz#48f0bf1a5ea205196929c0d9798b42d1ed98443c"
-  integrity sha512-5qxzGZjDs9w4tzT3TPhCJqWdCc3RLYwy9J2NB0nm5Lz+S273lvWcpjaTGHsT1dc6Hhfq41uSEOw8wBmxrKOuyg==
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/regjsgen/-/regjsgen-0.5.2.tgz#92ff295fb1deecbf6ecdab2543d207e91aa33733"
+  integrity sha512-OFFT3MfrH90xIW8OOSyUrk6QHD5E9JOTeGodiJeBS3J6IwlgzJMNE/1bZklWz5oTg+9dCMyEetclvCVXOPoN3A==
 
 regjsparser@^0.6.4:
   version "0.6.4"

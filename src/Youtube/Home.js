@@ -1,14 +1,37 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import Data from './DataProvider';
 import Metrics from '../Metrics';
 import VideoModal from './VideoModal';
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
+import Animated, {
+  Easing,
+  timing,
+  Extrapolate,
+  Value,
+} from 'react-native-reanimated';
 
 const AvatarSize = 50;
 
 const Home = () => {
   const [video, setVideo] = useState(null);
+  const [animationValue, setAnimationValue] = useState(new Value(0));
+
+  useEffect(() => {
+    if (video) {
+      timing(animationValue, {
+        duration: 300,
+        toValue: 1,
+        easing: Easing.inOut(Easing.ease),
+      }).start(() => {});
+    }
+  }, [video]);
+
+  const translateContainerY = animationValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: [Metrics.Height, 0],
+    extrapolate: Extrapolate.CLAMP,
+  });
 
   return (
     <View style={{flex: 1}}>
@@ -39,7 +62,20 @@ const Home = () => {
         })}
       </ScrollView>
       {video && (
-        <VideoModal {...{video, onClose: () => setVideo(null)}}></VideoModal>
+        <Animated.View
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              backgroundColor: 'white',
+              transform: [
+                {
+                  translateY: translateContainerY,
+                },
+              ],
+            },
+          ]}>
+          <VideoModal video={video}></VideoModal>
+        </Animated.View>
       )}
     </View>
   );

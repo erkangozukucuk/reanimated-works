@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, View, Text} from 'react-native';
+import {View, TouchableOpacity, Text} from 'react-native';
 
 const Home = ({navigation}) => {
   return (
@@ -14,5 +14,4 @@ const Home = ({navigation}) => {
     </View>
   );
 };
-
 export default Home;
